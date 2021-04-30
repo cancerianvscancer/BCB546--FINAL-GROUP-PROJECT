@@ -10,7 +10,7 @@ This article can be found [here](https://www.nature.com/articles/s41588-017-0029
 ### Home directory
 
 ### Raw data
-
+All data obtained from the paper used for our analysis can be found in the `Raw data` directory
 ### Graphs generated
 
 ### Code
