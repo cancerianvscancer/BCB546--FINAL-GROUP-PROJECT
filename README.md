@@ -11,6 +11,10 @@ This article can be found [here](https://www.nature.com/articles/s41588-017-0029
 
 ### Raw data
 
-### Graphs
+### Graphs generated
 
 ### Code
+
+### Coll_etal-2018
+
+## Contributions to the project
