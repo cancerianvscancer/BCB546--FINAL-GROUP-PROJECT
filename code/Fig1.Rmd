@@ -1,0 +1,54 @@
+---
+title: "Final project Fig1"
+date: "4/30/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Geographic distribution of five countries with highest Mycobacterium tuberculosis isolates analyzed in the study
+
+1. Getting the data
+
+```{r}
+
+#getting the data required for plotting geographical distribution. This excel sheet can be found in the github repository
+
+TB_world= read.csv("/Users/sushmaambekar/Documents/GitHub/BCB546--FINAL-GROUP-PROJECT/World_TB.csv", header = TRUE)
+
+#changing variable type to numeric
+TB_world$Lat <- as.numeric(TB_world$Lat)
+TB_world$Long <- as.numeric(TB_world$Long)
+TB_world$L1 <- as.numeric(TB_world$L1)
+TB_world$L2 <- as.numeric(TB_world$L2)
+TB_world$L3 <- as.numeric(TB_world$L3)
+TB_world$L4 <- as.numeric(TB_world$L4)
+
+```
+
+2. Plotting the chart
+
+``` {r, echo=FALSE}
+
+install.packages("scatterpie")
+library(ggplot2)
+library(scatterpie)
+
+world <- map_data('world')
+p <- ggplot(world, aes(long, lat)) +
+    geom_map(map=world, aes(map_id=region), fill=NA, color="grey") +
+    coord_quickmap() +
+  theme_classic()
+p
+
+Fig1 <- p + geom_scatterpie(aes(x=Long, y=Lat, group=Country, r=Radius),
+                           data=TB_world,
+                           cols=c("L1", "L2", "L3", "L4"), color=NA, alpha=.8, 
+                           legend_name = "Lineages") 
+Fig1
+
+```
