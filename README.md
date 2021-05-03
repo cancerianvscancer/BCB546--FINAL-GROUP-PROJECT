@@ -1,4 +1,4 @@
-# BCB546--FINAL-GROUP-PROJECT
+# BCB546-Animal Crossers-Final project
 Repository to share files, edit and analyze data for final group project by 'Animal Crossers'
 Group members: Giang Nguyen, Prita Pandya, Sushma Ambekar and Vishesh Bhatia
 
@@ -10,13 +10,15 @@ Link to slides is [here](https://docs.google.com/presentation/d/1OJUet5GiwK73JQy
 ## Description of the repository
 
 ### Home directory
+The home directory contains the PDF of the paper we worked on, the slides presented in the class as well as the sub-directories listed below. [Coll_etal-2018](https://github.com/cancerianvscancer/BCB546--FINAL-GROUP-PROJECT/blob/main/Coll_etal-2018.md) gives a brief description of the paper, the analyses conducted and results obtained.
 
-### Raw data
-All data obtained from the paper used for our analysis can be found in the `Raw data` directory
-### Graphs generated
+### 1. Raw data
+All data obtained from the paper used for our analysis can be found in the `Raw data` directory. Table 1, 2 and 3 were available as .xlsx files while supplementary tables were processed from PDF format using Virtual Studio Code to generate .xlsx files.
 
-### Code
+### 2. Graphs generated
+All graphs were generated with R Studio Version 1.4.1106 using the ggplot package. Data required for generating the graphs can be found in the `Raw data` directory and will have to be downloaded prior to use.
 
-### Coll_etal-2018
+### 3. Code
+Scripts for the plots were written and commented in R markdown and are available in this directory. Each .Rmd file is named based on the figure it is used for, from the paper.
 
 ## Contributions to the project
