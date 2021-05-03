@@ -1,4 +1,4 @@
-# BCB546-Animal Crossers-Final project
+# BCB546X-Animal Crossers-Final project
 Repository to share files, edit and analyze data for final group project by 'Animal Crossers'
 Group members: Giang Nguyen, Prita Pandya, Sushma Ambekar and Vishesh Bhatia
 
