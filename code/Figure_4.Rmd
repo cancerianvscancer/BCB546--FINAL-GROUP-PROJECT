@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-setwd("./code")
+setwd(".")
 ```
 
 #In this file, data was taken from the reference 
@@ -21,7 +21,7 @@ library(tidyverse)
 ```
 
 
-```{r}
+```{r warning=FALSE}
 Figure_4 <- ggplot(Supplementary_Table_4, aes(x=Lineages, y=Intergenic_Regions)) + geom_segment( aes(x=Lineages, xend = Lineages, y = 0, yend = Intergenic_Regions ), size=3, color="goldenrod1") +geom_point(color= "red3", size=4, alpha=0.6) + theme_light() + coord_flip() + theme(panel.grid.major.y = element_blank(), panel.border = element_blank(), 
 axis.ticks.y = element_blank()
 )
@@ -30,7 +30,4 @@ print(Figure_4)
 dev.off()
 ```
 
-```{r}
-
-```
 
