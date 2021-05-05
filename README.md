@@ -10,7 +10,7 @@ Link to slides is [here](https://docs.google.com/presentation/d/1OJUet5GiwK73JQy
 ## Description of the repository
 
 ### Home directory
-The home directory contains the PDF of the paper we worked on, the slides presented in the class as well as the sub-directories listed below. [Coll_etal-2018](https://github.com/cancerianvscancer/BCB546--FINAL-GROUP-PROJECT/blob/main/Coll_etal-2018.md) gives a brief description of the paper, the analyses conducted and results obtained.
+The home directory contains the [PDF](https://github.com/cancerianvscancer/BCB546--FINAL-GROUP-PROJECT/blob/main/Coll_etal-2018.pdf) of the paper we worked on, the [slides](https://github.com/cancerianvscancer/BCB546--FINAL-GROUP-PROJECT/blob/main/Final%20project-%20Animal%20crosssers.pdf) presented in the class as well as the sub-directories listed below. [Coll_etal-2018](https://github.com/cancerianvscancer/BCB546--FINAL-GROUP-PROJECT/blob/main/Coll_etal-2018.md) gives a brief description of the paper, the analyses conducted and results obtained.
 
 ### 1. Raw data
 All data obtained from the paper used for our analysis can be found in the `Raw data` directory. Table 1, 2 and 3 were available as .xlsx files while supplementary tables were processed from PDF format using Virtual Studio Code to generate .xlsx files.
