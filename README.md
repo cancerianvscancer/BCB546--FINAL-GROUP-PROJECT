@@ -23,6 +23,6 @@ Scripts for the plots were written and commented in R markdown and are available
 
 ## Contributions to the project
 The paper to be replicated was chosen from multiple other options by the group. We attempted to reach out to the authors and request for missing data but they were unresponsive.
--Raw data was processed as excel sheets and uploaded to the Github repository by Giang Nguyen.
--Plots generated for Fig1 showing the geographic distribution of the lineages and drug resistant phenotypes was done by Sushma Ambekar. For this, the data was first plotted as a bar graph and then converted to a pie chart using the function coord_polar(). Latitudes and longitudes of the geographical locations were obtained and the pie charts were plotted on the world map using scatterpie.
--Coll_etal-2018.md file was worked on by Vishesh Bhatia and Sushma Ambekar giving a brief description of the paper.
+- Raw data was processed as excel sheets and uploaded to the Github repository by Giang Nguyen.
+- Plots generated for Fig1 showing the geographic distribution of the lineages and drug resistant phenotypes was done by Sushma Ambekar. For this, the data was first plotted as a bar graph and then converted to a pie chart using the function coord_polar(). Latitudes and longitudes of the geographical locations were obtained and the pie charts were plotted on the world map using scatterpie.
+- Coll_etal-2018.md file was worked on by Vishesh Bhatia and Sushma Ambekar giving a brief description of the paper.
