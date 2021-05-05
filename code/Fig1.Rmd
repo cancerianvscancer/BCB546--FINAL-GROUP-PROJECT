@@ -1,5 +1,6 @@
 ---
 title: "Final project Fig1"
+author: "Sushma Ambekar"
 date: "4/30/2021"
 output:
   pdf_document: default
@@ -16,9 +17,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 
-#getting the data required for plotting geographical distribution. This excel sheet can be found in the github repository
+#getting the data required for plotting geographical distribution. This csv file can be found in the github repository
 
-TB_world= read.csv("/Users/sushmaambekar/Documents/GitHub/BCB546--FINAL-GROUP-PROJECT/World_TB.csv", header = TRUE)
+TB_world <- read.csv("/Users/sushmaambekar/Documents/GitHub/BCB546--FINAL-GROUP-PROJECT/World_TB.csv", header = TRUE)
+
+TB_types <- read.csv("/Users/sushmaambekar/Documents/GitHub/BCB546--FINAL-GROUP-PROJECT/Types_of_TB.csv", header = TRUE)
 
 #changing variable type to numeric
 TB_world$Lat <- as.numeric(TB_world$Lat)
@@ -28,6 +31,13 @@ TB_world$L2 <- as.numeric(TB_world$L2)
 TB_world$L3 <- as.numeric(TB_world$L3)
 TB_world$L4 <- as.numeric(TB_world$L4)
 
+
+TB_types$Lat <- as.numeric(TB_types$Lat)
+TB_types$Long <- as.numeric(TB_types$Long)
+TB_types$Susceptible <- as.numeric(TB_types$Susceptible)
+TB_types$Drug.resistant <- as.numeric(TB_types$Drug.resistant)
+TB_types$MDR.TB <- as.numeric(TB_types$MDR.TB)
+TB_types$XDR.TB <- as.numeric(TB_types$XDR.TB)
 ```
 
 2. Plotting the chart
@@ -45,10 +55,19 @@ p <- ggplot(world, aes(long, lat)) +
   theme_classic()
 p
 
-Fig1 <- p + geom_scatterpie(aes(x=Long, y=Lat, group=Country, r=Radius),
+Fig1a <- p + geom_scatterpie(aes(x=Long, y=Lat, group=Country, r=Radius),
                            data=TB_world,
                            cols=c("L1", "L2", "L3", "L4"), color=NA, alpha=.8, 
                            legend_name = "Lineages") 
-Fig1
+Fig1a
 
+
+Fig1b <- p + geom_scatterpie(aes(x=Long, y=Lat, group=Country, r=Radius),
+                           data=TB_types,
+                           cols=c("Susceptible", "Drug.resistant", 
+                                  "MDR.TB", "XDR.TB"), 
+                           color=NA, alpha=.8, 
+                           legend_name = "Phenotype") 
+
+Fig1b
 ```
