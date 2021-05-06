@@ -23,6 +23,11 @@ Scripts for the plots were written and commented in R markdown and are available
 
 ## Contributions to the project
 The paper to be replicated was chosen from multiple other options by the group. We attempted to reach out to the authors and request for missing data but they were unresponsive.
+
+- First the repository was created by Prita Pandya to help share the data and work together. Each member of the group was added and give them administrator access. 
 - Raw data was processed as excel sheets and uploaded to the Github repository by Giang Nguyen.
 - Plots generated for Fig1 showing the geographic distribution of the lineages and drug resistant phenotypes was done by Sushma Ambekar. For this, the data was first plotted as a bar graph and then converted to a pie chart using the function coord_polar(). Latitudes and longitudes of the geographical locations were obtained and the pie charts were plotted on the world map using scatterpie.
 - Coll_etal-2018.md file was worked on by Vishesh Bhatia and Sushma Ambekar giving a brief description of the paper.
+- The data in Table 1 and Table 2 given in the paper was used to make graphs using R by Prita Pandya. We wanted to represnt the table data visually thorugh graphs.
+- For the figures 3a and 3b, Gian Nguyen randomly selected genes from the figure 3 in the paper and created excel file with make up numbers/ data due to unavailibility of the     actual data. 
+- Using the make up file provided with the files in the repository, Giang Nguen made the figures 3a and 3b using R
