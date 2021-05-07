@@ -32,3 +32,4 @@ The paper to be replicated was chosen from multiple other options by the group. 
 - For the figures 3a and 3b, Gian Nguyen randomly selected genes from the figure 3 in the paper and created excel file with make up numbers/ data due to unavailibility of the actual data. 
 - Using the make up file provided with the files in the repository, Giang Nguen made the figures 3a and 3b using R
 - Supplementary Table 4 was processed as excel sheet and for every gene present in the particular lineage, a score of 1 was given. The total hits were counted and presented in Figure_4. The code of for the figure can be found in the Code Folder and the figure is in the Graphs Generated Folder. All of this was performed by Vishesh Bhatia. 
+- Slides for the presentation were made by contribution from all team members.
