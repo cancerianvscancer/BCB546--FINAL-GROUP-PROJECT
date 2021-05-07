@@ -5,8 +5,6 @@ Group members: Giang Nguyen, Prita Pandya, Sushma Ambekar and Vishesh Bhatia
 This project was based on the paper **'Genome-wide analysis of multi- and extensively drug-resistant Mycobacterium tuberculosis'**. 
 This article can be found [here](https://www.nature.com/articles/s41588-017-0029-0)
 
-Link to slides is [here](https://docs.google.com/presentation/d/1OJUet5GiwK73JQydTlY5F9cYvHcFAhv6V80tJf5jthI/edit?usp=sharing)
-
 ## Description of the repository
 
 ### Home directory
