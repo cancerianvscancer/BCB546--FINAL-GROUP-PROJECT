@@ -1,0 +1,52 @@
+
+title: "Final project - BCB546"
+author: "Prita"
+date: "4/20/2021"
+output: html_document
+---
+
+```{r}
+
+# The files- Table1 and Table2 was dowloaded from the project repository and saved as.csv files to work with in R.
+
+library(dplyr)
+library(tidyverse)
+
+rm(list = ls())
+
+
+table1 <- read.csv("C:/Users/prita/Desktop/BCB546 R assignment/Table1-group .csv" , header = T)
+view(table1)
+
+table2 <- read.csv("C:/Users/prita/Desktop/BCB546 R assignment/Table2.csv" , header = T)
+view(table2)
+
+
+# Final codes:
+
+# to make graph of SNPs indentified by GWAS in 3 different groups as given in table 1:
+
+ggplot(data = table1,aes(x = Comparison , y = Assoc..SNPs.c , fill = Comparison)) + geom_col()  + ggtitle(label = "SNPs identified through GWAS in MDR-TB and XDR-TB group") +
+xlab(label = "Gene Name") + ylab(label = "number of SNPs") + theme_bw() + theme(legend.position = "none")
+ 
+ # to make graph of SNPs indentified by GWAS in 3 different groups as given in table 1:
+ 
+ggplot(data = table1,aes(x = Comparison , y = PhyC.SNPs.d , fill = Comparison)) + geom_col()  + ggtitle(label = "SNPs identified through PhyC in MDR-TB and XDR-TB group") + 
+xlab(label = "Gene Name") + ylab(label = "number of SNPs") + theme_bw() + theme(legend.position = "none")
+
+# to make bar graph of SNPs identified by GWAS in different target gene from the data in table 2:
+
+ggplot(data = table2,aes(x = Gene.name , y = Assoc..SNPs.c, fill = Gene.name)) + geom_col() + ggtitle(label = "SNPs identified in gene of interest") + 
+xlab(label = "Gene of interest") + ylab(label = "number of SNPs") + theme(axis.text.x = element_text(size = 8, angle = 90)) + theme(legend.position = "none")
+
+# to make bar graph of SNPs identified by GWAS against different drugs from the data in table 2:    
+
+ggplot(data = table2,aes(x = Drug , y = Assoc..SNPs.c , fill = Drug)) + geom_col() + ggtitle(label = "SNPs identified through GWAS") + 
+xlab(label = "Drug used for treatment") + ylab(label = "number of SNPs") + theme_bw() + theme(axis.text.x = element_text(size = 8, angle = 90)) + theme(legend.position = "none")
+
+# trail gaph code- to make gradient bar graph
+ggplot(data = table2,aes(x = Drug , y = Assoc..SNPs.c)) + geom_bar(stat = "identity" , aes(fill = Assoc..SNPs.c))   +
+  scale_fill_gradient2(low = "orange" , mid = "snow" , high = "blue")+ggtitle(label = "SNPs identified in gene of interest through GWAS") + xlab(label = "Gene of interest") + 
+  ylab(label = "number of SNPs") + theme_bw() + theme(axis.text.x = element_text(size = 8, angle = 90))
+
+
