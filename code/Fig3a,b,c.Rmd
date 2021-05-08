@@ -1,0 +1,122 @@
+---
+title: "Figure 3_Final"
+author: "Giang Nguyen"
+date: "5/6/2021"
+output: html_document
+---
+
+```
+```
+```{r}
+library("readxl")
+
+read_excel("C:\\Users\\giang nguyen\\Desktop\\Makeup_data_figure_3.xlsx")
+my_data <- read_excel("C:\\Users\\giang nguyen\\Desktop\\Makeup_data_figure_3.xlsx")
+library(tidyverse)
+```
+
+## Code for figure 3a
+
+
+```{r cars}
+plot1 <- ggplot(my_data, aes( x= reorder(Gene, OR, FUN= median), y = OR)) + geom_boxplot(fill= "white", alpha = 0.5) + stat_boxplot(geom = 'errorbar', width = 0.2) + geom_point(alpha=0.2)
+print(plot1)
+```
+
+
+```{r cars}
+plot2 <- ggplot(my_data, aes(x= reorder(Gene, OR, FUN= median), y= OR, size = No.sample, color = Resistance_level )) + geom_point(alpha=0.3) +   scale_radius(range = c(0.01, 5))
+print(plot2)
+```
+
+
+```{r cars}
+Fig3a <-  ggplot(my_data, aes(x= reorder(Gene, OR, FUN= median), y= OR)) + geom_point(aes(color = Resistance_level, size = No.sample), alpha=0.7) +   scale_size(range = c(0.01, 6)) + ylab("log odds ratio") + xlab ("gene") + geom_boxplot(fill= "white", alpha = 0.5) + stat_boxplot(geom = 'errorbar', width = 0.2) +  geom_point(alpha=0.3)
+print(Fig3a)
+```
+
+
+```{r cars}
+Fig3a1<- Fig3a + theme(axis.text.x = element_text(angle = 45, hjust = 1))
+print(Fig3a1)
+```
+
+
+```{r cars}
+Fig3a2 <- Fig3a1 + scale_y_continuous(breaks=c(0, 2, 4,6, 8))
+print(Fig3a2)
+```
+
+
+```{r cars}
+Fig3a3 <- Fig3a2 + theme (panel.grid.major.x = element_blank ())
+```
+```{r}
+print(Fig3a3)
+```
+
+
+```{r}
+Fig3a4 <- Fig3a3 + theme_bw()
+print(Fig3a4)
+```
+
+
+```{r}
+Fig3a5 <- Fig3a4 + theme (panel.grid.major.x = element_blank ()) 
+Fig3aFinal <- Fig3a5 + theme(axis.text.x = element_text(angle = 45, hjust = 1))
+print(Fig3aFinal)
+```
+
+```{r}
+Fig3b <- my_data %>%
+    arrange(MIC_OR) %>%
+    mutate(name = factor(Resistance_level, levels=c("Unknown", "Low", "Intermediate", "High"))) %>%
+    ggplot( aes(x=name, y=MIC_OR, fill= name)) +
+    geom_boxplot() + 
+    xlab("Resistance level") + ylab("log odds ratio")+  theme(legend.position = "none")+ stat_boxplot(geom = 'errorbar', width = 0.2) + geom_point(alpha=0.2)
+```
+
+
+```{r}
+print(Fig3b)
+```
+
+
+```{r}
+Fig3b1 <- Fig3b + theme_bw() + theme (panel.grid.major.x = element_blank ()) + theme(axis.text.x = element_text(angle = 45, hjust = 1)) + scale_y_continuous(breaks=c(0, 1, 2,3,4,5,6))
+print(Fig3b1)
+```
+
+
+```{r}
+Fig3b2 <- Fig3b1 + theme(legend.position = "none")
+print(Fig3b2)
+```
+
+
+```{r}
+plot14 <- my_data %>%
++     arrange(MIC_OR) %>%
++     mutate(name = factor(RL, levels=c("Known","Novel"))) %>%
++     ggplot( aes(x=name, y=MIC_OR, fill= name)) +
++     geom_boxplot(fill = "white") + 
++     xlab("Resistance level") + ylab("log odds ratio")+  theme(legend.position = "none")+ stat_boxplot(geom = 'errorbar', width = 0.2) + geom_point(alpha=0.2)
+print(plot14)
+```
+
+
+```{r}
+plot15 <- plot14 +  theme_bw()
+print(plot15)
+plot16 <- plot15 + theme(legend.position = "none")
+print(plot16)
+plot17 <- plot16 + theme_bw() + theme (panel.grid.major.x = element_blank ()) + theme(axis.text.x = element_text(angle = 45, hjust = 1)) + scale_y_continuous(breaks=c(0, 1, 2,3,4,5,6))
+print(plot17)
+Fig3c <- plot17 + theme(legend.position = "none")
+print(Fig3c)
+
+```
+
+```
+
